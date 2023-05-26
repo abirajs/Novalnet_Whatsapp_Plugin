@@ -1,7 +1,7 @@
 {
-	"name"				: "Novalnet",
+	"name"				: "NovalnetWhatsapp",
 	"namespace"			: "Novalnet",
-	"marketplaceName"	        : {"de": "Novalnet AG", "en": "Novalnet AG"},
+	"marketplaceName"	        : {"de": "Novalnet Whatsapp", "en": "Novalnet Whatsapp"},
 	"type"				: "template",
 	"version"			: "1.0.0",
 	"license"			: "GPL-3.0",
@@ -13,14 +13,14 @@
 	"authorIcon"		        : "icon_author_xs.png",
 	"email"				: "sales@novalnet.de",
 	"phone"				: "+49 89 923068320",
-	"keywords"			: ["Novalnet", "plentymarkets", "payment", "plugin"],
+	"keywords"			: ["Novalnet", "plentymarkets", "payment", "plugin", "whatsapp"],
 	"javaScriptFiles"	        : [],
 	"containers"		        : [],
-	"serviceProvider"               :"Novalnet\\Providers\\NovalnetServiceProvider",
+	"serviceProvider"               :"NovalnetWhatsapp\\Providers\\NovalnetServiceProvider",
 	"dataProviders"                 :
 	  [
 		{
-		  "key":"Novalnet\\Providers\\DataProvider\\NovalnetWhatsappProvider",
+		  "key":"NovalnetWhatsapp\\Providers\\DataProvider\\NovalnetWhatsappProvider",
 		  "name":"Whatsapp Widget",
 		  "description":"Display a Whatsapp widget"
 		}
