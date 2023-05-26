@@ -1,6 +1,6 @@
 {
 	"name"				: "Novalnet",
-	"namespace"			: "Novalnet",
+	"namespace"			: "Novalnet AG",
 	"marketplaceName"	        : {"de": "Novalnet", "en": "Novalnet"},
 	"type"				: "template",
 	"version"			: "1.0.0",
