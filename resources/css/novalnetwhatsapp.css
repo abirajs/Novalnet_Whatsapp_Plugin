@@ -9,9 +9,11 @@
 }
 
 .modal-dialog {
-   position:fixed;
-   top:auto;
-   right:auto;
-   left:auto;
-   bottom:0;
-}  
+   float:right;
+    position:fixed;
+    overflow:hidden;
+    bottom:0;
+    margin-right:50px;
+    margin-bottom:250px;
+    right: 0;  
+} 
