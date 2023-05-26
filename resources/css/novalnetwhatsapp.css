@@ -3,15 +3,8 @@
     position:fixed;
     overflow:hidden;
     bottom:0;
-    margin-right:50px;
+    margin-right:20px;
     margin-bottom:70px;
     right: 0;    
 }
-.modal-dialog {
-    position:fixed;
-    overflow:hidden;
-    bottom:0;
-    margin-right:50px;
-    margin-bottom:250px;
-    right: 0;  
-} 
+
