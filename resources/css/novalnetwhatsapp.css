@@ -7,3 +7,11 @@
     margin-bottom:50px;
     right: 0;    
 }
+
+.modal-dialog {
+   position:fixed;
+   top:auto;
+   right:auto;
+   left:auto;
+   bottom:0;
+}  
