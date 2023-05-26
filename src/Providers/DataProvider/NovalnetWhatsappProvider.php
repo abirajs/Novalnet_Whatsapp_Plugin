@@ -1,6 +1,6 @@
 <?php
 
-namespace Novalnet\Providers\DataProvider;
+namespace NovalnetWhatsapp\Providers\DataProvider;
 
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
