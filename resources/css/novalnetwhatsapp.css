@@ -1,2 +1,17 @@
-
- 
+.whatsappwidget {
+    float:right;
+    position:fixed;
+    overflow:hidden;
+    bottom:0;
+    margin-left:50px;
+    margin-bottom:50px;
+    right: 0;    
+}
+.modal-dialog {
+    position:fixed;
+    overflow:hidden;
+    bottom:0;
+    margin-right:50px;
+    margin-bottom:250px;
+    right: 0;  
+} 
