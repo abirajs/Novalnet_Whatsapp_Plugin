@@ -1,6 +1,6 @@
 {
 	"name"				: "NovalnetWhatsapp",
-	"namespace"			: "Novalnet",
+	"namespace"			: "NovalnetWhatsapp",
 	"marketplaceName"	        : {"de": "Novalnet Whatsapp", "en": "Novalnet Whatsapp"},
 	"type"				: "template",
 	"version"			: "1.0.0",
