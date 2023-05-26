@@ -9,7 +9,6 @@
 }
  
 .modal-dialog {
-   float:right;
     position:fixed;
     overflow:hidden;
     bottom:0;
