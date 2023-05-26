@@ -14,6 +14,6 @@ class NovalnetWhatsappProvider extends ServiceProvider
 	 */
     public function call(Twig $twig):string
     {
-        return $twig->render('Novalnet::NovalnetWhatsappDataProvider');
+        return $twig->render('NovalnetWhatsapp::NovalnetWhatsappDataProvider');
     }
 }
