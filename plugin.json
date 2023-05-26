@@ -8,10 +8,7 @@
 	"pluginIcon"		        : "icon_plugin_xs.png",
 	"price"				: 0.0,
 	"type"                          :"template",
-	"require"                       : {
-							"IO": ">= 4.0.0",
-							"Ceres": ">= 4.0.0"
-						},
+	"require"                       : [],
 	"author"			: "Novalnet AG",
 	"authorIcon"		        : "icon_author_xs.png",
 	"email"				: "sales@novalnet.de",
