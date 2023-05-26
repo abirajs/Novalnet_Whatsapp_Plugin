@@ -16,6 +16,9 @@
 	"keywords"			: ["Novalnet", "plentymarkets", "payment", "plugin", "whatsapp"],
 	"javaScriptFiles"	        : [],
 	"containers"		        : [],
+	"platform"			: {
+        					"php": ">=7.3 <8.1"
+    					  },
 	"serviceProvider"               :"NovalnetWhatsapp\\Providers\\NovalnetServiceProvider",
 	"dataProviders"                 :
 	  [
