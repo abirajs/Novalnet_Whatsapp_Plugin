@@ -10,7 +10,9 @@ $(document).ready(function(){
 });
 
 function whatsapp(id) { 
-	var test =  $('.member'+id).attr("phone");
-	alert(test);  
+	var phone   =  $('.member'+id).attr("phone");
+	var message =  'Hi how can i help you..'; 
+	alert(phone); 
+	alert(message);
 	//~ window.location.href = "https://web.whatsapp.com/send?phone=8754754860&text=hi how can i help you";
 }
