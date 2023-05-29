@@ -19,5 +19,8 @@ $(document).ready(function(){
     $(".whatsappcontainer").toggle();
    });
  
+   $(".whatsapp-cancel").click(function()	{
+    $(".whatsappcontainer").hide();
+  });
  
 });
