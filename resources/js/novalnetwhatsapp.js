@@ -4,7 +4,6 @@ function myFunction() {
 
 $(document).ready(function(){
    $(".whatsappwidget").click(function(){
-    alert("hi");
     $(".whatsappcontainer").toggle();
    });
 });
