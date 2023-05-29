@@ -11,9 +11,8 @@
 .whatsappcontainer {
     float:right;
     position:fixed;
-    overflow:hidden;
     bottom:0;
     margin-right:50px;
-    margin-bottom:130px;
+    margin-bottom:250px;
     right: 0;   
 }
