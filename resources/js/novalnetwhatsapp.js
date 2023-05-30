@@ -21,7 +21,7 @@ function whatsapp(id) {
     var apiEndPoint = 'https://';
     var phone   =  $('.member'+id).attr("phone");
     var message =  'Hi how can i help you..'; 
-    if(isMobileTrue){
+    if(isMobileTrue != 'false'){
         apiEndPoint = apiEndPoint+'api';
     }else{
         apiEndPoint = apiEndPoint+'web';
