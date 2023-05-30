@@ -25,7 +25,7 @@ function whatsapp(id) {
     }else{
         apiEndPoint = apiEndPoint+'web';
     }
-    apiEndPoint = apiEndPoint+'.whatsapp.com/send?phone=' + phone + '&text=' + (message);
+    apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
     alert(apiEndPoint);
     window.open(apiEndPoint);
 }
