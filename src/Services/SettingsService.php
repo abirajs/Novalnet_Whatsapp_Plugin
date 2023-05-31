@@ -66,9 +66,9 @@ class SettingsService
                                   ->get();
         return $settings[0];
     }
-
+	
     /**
-     * Create or Update Novalnet configuration values
+     * Create or Update Novalnet Configurations values
      *
      * @param array $data
      * @param int $clientId
@@ -91,7 +91,7 @@ class SettingsService
     }
 
     /**
-     * Get the individual configuration values
+     * Get the individual configurations values
      *
      * @param string $settingsKey
      * @param string $paymentKey
