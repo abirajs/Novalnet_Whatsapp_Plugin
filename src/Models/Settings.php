@@ -6,12 +6,12 @@
  * @copyright(C) Novalnet
  * @license      https://www.novalnet.de/payment-plugins/kostenlos/lizenz
  */
-namespace Novalnet\Models;
+namespace NovalnetWhatsapp\Models;
 
 use Carbon\Carbon;
 use Plenty\Modules\Plugin\DataBase\Contracts\DataBase;
 use Plenty\Modules\Plugin\DataBase\Contracts\Model;
-use Novalnet\Services\PaymentService;
+use NovalnetWhatsapp\Services\PaymentService;
 use Plenty\Plugin\Log\Loggable;
 
 /**
