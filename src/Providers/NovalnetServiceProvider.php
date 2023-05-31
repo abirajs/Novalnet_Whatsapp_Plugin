@@ -2,8 +2,9 @@
 
 namespace NovalnetWhatsapp\Providers;
 
+use NovalnetWhatsapp\Assistants\NovalnetAssistant;
 use Plenty\Plugin\ServiceProvider;
-use Plenty\Plugin\Templates\Twig;
+use Plenty\Modules\Wizard\Contracts\WizardContainerContract;
 use Plenty\Plugin\Log\Loggable;
 
 class NovalnetServiceProvider extends ServiceProvider
