@@ -156,7 +156,7 @@ class NovalnetAssistant extends WizardProvider
                             'type'         => 'checkbox',
                             'defaultValue' => true,
                             'options'   => [
-                                            'name'  => 'Enable Whatsapp Chat'
+                                            'name'  => 'NovalnetAssistant.enableChat'
                                            ]
                         ],
                         
