@@ -148,10 +148,10 @@ class NovalnetAssistant extends WizardProvider
                     [
                         'enableChat' =>
                         [
-                            'type'      => 'checkbox',
+                            'type'         => 'checkbox',
+                            'defaultValue' => true,
                             'options'   => [
-                                            'name'      => 'Enable Whatsapp Chat by Novalnet',
-                                            'required'  =>  true
+                                            'name'  => 'Enable Whatsapp Chat'
                                            ]
                         ],
                         
@@ -171,25 +171,7 @@ class NovalnetAssistant extends WizardProvider
                                             'name'      => 'chat Description',
                                             'required'  => true,                                           
                                            ]
-                        ],
-                        
-                        'novalnetClientKey' =>
-                        [
-                            'type'      => 'text',
-                            'options'   => [
-                                            'name'      => 'Client Key',
-                                            'required'  => true
-                                           ]
-                        ],
-                        
-                        'novalnetOrderCreation' =>
-                        [
-                            'type'         => 'checkbox',
-                            'defaultValue' => true,
-                            'options'   => [
-                                            'name'  => 'Order Creation'
-                                           ]
-                        ],
+                        ],                       
                         
                     ]
                 ]
