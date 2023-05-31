@@ -20,11 +20,6 @@ function whatsapp(id) {
     var apiEndPoint = 'https://';
     var phone   =  $('.member'+id).attr("phone");
     var message =  'Hi how can i help you..'; 
-    if(isMobileTrue == 'false'){
-        apiEndPoint = apiEndPoint+'api';
-    }else{
-        apiEndPoint = apiEndPoint+'web';
-    }
     apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
     alert(apiEndPoint);
     window.open(apiEndPoint);
