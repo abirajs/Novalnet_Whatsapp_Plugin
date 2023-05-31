@@ -7,10 +7,10 @@
  * @copyright(C) Novalnet
  * @license      https://www.novalnet.de/payment-plugins/kostenlos/lizenz
  */
-namespace Novalnet\Assistants\SettingsHandlers;
+namespace NovalnetWhatsapp\Assistants\SettingsHandlers;
 
-use Novalnet\Helper\PaymentHelper;
-use Novalnet\Services\SettingsService;
+use NovalnetWhatsapp\Helper\PaymentHelper;
+use NovalnetWhatsapp\Services\SettingsService;
 use Plenty\Modules\Plugin\PluginSet\Contracts\PluginSetRepositoryContract;
 use Plenty\Modules\Wizard\Contracts\WizardSettingsHandler;
 
