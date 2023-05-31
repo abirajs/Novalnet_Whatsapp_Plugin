@@ -143,7 +143,7 @@ class NovalnetAssistant extends WizardProvider
             "sections" => [
                 [
                     "title"         => 'General',
-                    "description"   => ' ',
+                    "description"   => 'Create your WhatsApp Chat and customize it',
                     "form"          =>
                     [
                         'enableChat' =>
