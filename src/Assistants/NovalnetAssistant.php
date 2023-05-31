@@ -82,8 +82,8 @@ class NovalnetAssistant extends WizardProvider
        $config = $this->createAccountConfiguration($config);
        $config = $this->createURLConfiguration($config);
        $config = $this->createButtonStyleMobileConfiguration($config);
-       $config = $this->createButtonStyleDesktopConfiguration($config);
-        return $config;
+       $config = $this->createButtonStyleDesktopConfiguration($config);      
+       return $config;
     }
           
    /**
@@ -281,18 +281,20 @@ class NovalnetAssistant extends WizardProvider
 							'options'       => [
 												'name'          => 'URL for Desktop',
 												'listBoxValues' => [
-																		'caption' => 'Web',
-																		'value'   => 'web'
-																	],
-																	
-																	[
-																		'caption' => 'API',
-																		'value'   => 'api'
-																	],
-																	
-																	[
-																		'caption' => 'Universal',
-																		'value'   => 'universal'
+																		[
+																			'caption' => 'Web',
+																			'value'   => 'web'
+																		],
+																		
+																		[
+																			'caption' => 'API',
+																			'value'   => 'api'
+																		],
+																		
+																		[
+																			'caption' => 'Universal',
+																			'value'   => 'universal'
+																		],
 																	],
 																	 
 											   ]
@@ -305,20 +307,20 @@ class NovalnetAssistant extends WizardProvider
 							'options'       => [
 												'name'          => 'URL for Mobile',
 												'listBoxValues' => [
-																		'caption' => 'Universal',
-																		'value'   => 'universal'
-																	],
-																	
-																	[
-																		'caption' => 'API',
-																		'value'   => 'api'
-																	],
-																	
-																	[
-																		'caption' => 'Web',
-																		'value'   => 'web'
-																	],
-																	 
+																		[	'caption' => 'Universal',
+																			'value'   => 'universal'
+																		],
+																		
+																		[
+																			'caption' => 'API',
+																			'value'   => 'api'
+																		],
+																		
+																		[
+																			'caption' => 'Web',
+																			'value'   => 'web'
+																		],
+																	],	 
 											   ]
 						],                      
                         
@@ -355,13 +357,14 @@ class NovalnetAssistant extends WizardProvider
 							'options'       => [
 												'name'          => 'Button Theme for Mobile',
 												'listBoxValues' => [
-																		'caption' => 'Green',
-																		'value'   => 'green'
-																	],
-																	
-																	[
-																		'caption' => 'White',
-																		'value'   => 'white'
+																		[	'caption' => 'Green',
+																			'value'   => 'green'
+																		],
+																		
+																		[
+																			'caption' => 'White',
+																			'value'   => 'white'
+																		],	
 																	],																								 
 											   ]
 						],
@@ -373,14 +376,15 @@ class NovalnetAssistant extends WizardProvider
 							'options'       => [
 												'name'          => 'Button Shape for Desktop',
 												'listBoxValues' => [
-																		'caption' => 'Circle',
-																		'value'   => 'circle'
-																	],
-																	
-																	[
-																		'caption' => 'Rectangle',
-																		'value'   => 'rectangle'
-																	],																								 
+																		[	'caption' => 'Circle',
+																			'value'   => 'circle'
+																		],
+																		
+																		[
+																			'caption' => 'Rectangle',
+																			'value'   => 'rectangle'
+																		],			
+																	],																						 
 											   ]
 						],                      
                         
@@ -416,13 +420,14 @@ class NovalnetAssistant extends WizardProvider
 							'options'       => [
 												'name'          => 'Button Theme for Desktop',
 												'listBoxValues' => [
-																		'caption' => 'Green',
-																		'value'   => 'green'
-																	],
-																	
-																	[
-																		'caption' => 'White',
-																		'value'   => 'white'
+																		[	'caption' => 'Green',
+																			'value'   => 'green'
+																		],
+																		
+																		[
+																			'caption' => 'White',
+																			'value'   => 'white'
+																		],	
 																	],																								 
 											   ]
 						],
@@ -434,13 +439,14 @@ class NovalnetAssistant extends WizardProvider
 							'options'       => [
 												'name'          => 'Button Shape for Desktop',
 												'listBoxValues' => [
-																		'caption' => 'Circle',
-																		'value'   => 'circle'
-																	],
-																	
-																	[
-																		'caption' => 'Rectangle',
-																		'value'   => 'rectangle'
+																		[	'caption' => 'Circle',
+																			'value'   => 'circle'
+																		],
+																		
+																		[
+																			'caption' => 'Rectangle',
+																			'value'   => 'rectangle'
+																		],	
 																	],																								 
 											   ]
 						],                      
