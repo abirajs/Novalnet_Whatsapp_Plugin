@@ -55,10 +55,10 @@ class NovalnetAssistant extends WizardProvider
     {
         $config =
         [
-            "title" => 'NovalnetWhatsapp',
+            "title" => 'Novalnet Whatsapp',
             "shortDescription" => 'Secure and Trust',
             "iconPath" => $this->getIcon(),
-            "translationNamespace" => 'Novalnet1',
+            "translationNamespace" => 'NovalnetWhatsapp',
             "key" => 'template-novalnet-assistant',
             "topics" => ['template'],
             "priority" => 999,
@@ -79,6 +79,10 @@ class NovalnetAssistant extends WizardProvider
         ];
 	
        $config = $this->createGeneralConfiguration($config);
+       $config = $this->createAccountConfiguration($config);
+       $config = $this->createURLConfiguration($config);
+       $config = $this->createButtonStyleMobileConfiguration($config);
+       $config = $this->createButtonStyleDesktopConfiguration($config);
         return $config;
     }
           
@@ -129,7 +133,7 @@ class NovalnetAssistant extends WizardProvider
     }
 	
     /**
-    * Create the global configurations
+    * Create the Genaral configurations
     *
     * @param array $config
     *
@@ -180,4 +184,272 @@ class NovalnetAssistant extends WizardProvider
         return $config; 
     }
 	
+	
+	/**
+    * Create the Account configurations
+    *
+    * @param array $config
+    *
+    * @return array
+    */
+    public function createAccountConfiguration($config)
+    {
+        $config['steps']['novalnetAccountConf'] =
+        [
+            "title" => 'Account Settings',
+            "sections" => [
+                [
+                    "title"         => 'Account Settings',
+                    "description"   => '',
+                    "form"          =>
+                    [
+                        'mobileNumber' =>
+                        [
+                            'type'         => 'text',
+                            'options'   => [
+                                            'name'  => 'Mobile Number',
+                                            'required'  => true
+                                           ]
+                        ],
+                        
+						'accountName' =>
+                        [
+                            'type'      => 'text',
+                            'options'   => [
+                                            'name'      => 'Account Name',
+                                            'required'  => true
+                                           ]
+                        ],
+                        
+                        'accountRole' =>
+                        [
+                            'type'      => 'text',
+                            'options'   => [
+                                            'name'      => 'Account Role',
+                                            'required'  => true,                                           
+                                           ]
+                        ],  
+                        
+						'profileLogo' =>
+					    [
+							'type'      => 'file',
+							'options'   => [
+											'name'              => 'Profile',
+											'showPreview'       => true,
+											'allowedExtensions' => ['svg', 'png', 'jpg', 'jpeg'],
+											'allowFolders'      => false
+										   ]
+						],                                            
+                    ]
+                ]
+            ]
+        ];
+        return $config; 
+    }
+       
+    /**
+    * Create the URL configurations
+    *
+    * @param array $config
+    *
+    * @return array
+    */
+    public function createURLConfiguration($config)
+    {
+        $config['steps']['novalnetURLConf'] =
+        [	
+            "title" => 'WhatApp Redirect URL Configuration',
+            "sections" => [
+                [
+                    "title"         => 'WhatApp Redirect URL Configuration',
+                    "description"   => 'The URL will be redirect from your config settings',
+                    "form"          =>
+                    [
+                        'openNewTab' =>
+                        [
+                            'type'         => 'checkbox',
+                            'defaultValue' => true,
+                            'options'   => [
+                                            'name'  => 'Open chat url in new tab'
+                                           ]
+                        ],
+                        
+						'URLforDesktop' =>
+						[
+							'type'          => 'select',
+							'defaultValue'  => 'web',
+							'options'       => [
+												'name'          => 'URL for Desktop',
+												'listBoxValues' => [
+																		'caption' => 'Web',
+																		'value'   => 'web'
+																	],
+																	
+																	[
+																		'caption' => 'API',
+																		'value'   => 'api'
+																	],
+																	
+																	[
+																		'caption' => 'Universal',
+																		'value'   => 'universal'
+																	],
+																	 
+											   ]
+						],
+                        
+						'URLforMobile' =>
+						[
+							'type'          => 'select',
+							'defaultValue'  => 'universal',
+							'options'       => [
+												'name'          => 'URL for Mobile',
+												'listBoxValues' => [
+																		'caption' => 'Universal',
+																		'value'   => 'universal'
+																	],
+																	
+																	[
+																		'caption' => 'API',
+																		'value'   => 'api'
+																	],
+																	
+																	[
+																		'caption' => 'Web',
+																		'value'   => 'web'
+																	],
+																	 
+											   ]
+						],                      
+                        
+                    ]
+                ]
+            ]
+        ];
+        return $config; 
+    }
+    
+    
+    /**
+    * Create the button style for configurations
+    *
+    * @param array $config
+    *
+    * @return array
+    */
+    public function createButtonStyleMobileConfiguration($config)
+    {
+        $config['steps']['novalnetButtonStyleMobileConf'] =
+        [
+            "title" => 'WhatApp Button Style Mobile',
+            "sections" => [
+                [
+                    "title"         => 'WhatApp Button Style Mobile',
+                    "description"   => '',
+                    "form"          =>
+                    [
+                        'mobileTheme' =>
+						[
+							'type'          => 'select',
+							'defaultValue'  => 'green',
+							'options'       => [
+												'name'          => 'Button Theme for Mobile',
+												'listBoxValues' => [
+																		'caption' => 'Green',
+																		'value'   => 'green'
+																	],
+																	
+																	[
+																		'caption' => 'White',
+																		'value'   => 'white'
+																	],																								 
+											   ]
+						],
+						
+						'mobileShape' =>
+						[
+							'type'          => 'select',
+							'defaultValue'  => 'circle',
+							'options'       => [
+												'name'          => 'Button Shape for Desktop',
+												'listBoxValues' => [
+																		'caption' => 'Circle',
+																		'value'   => 'circle'
+																	],
+																	
+																	[
+																		'caption' => 'Rectangle',
+																		'value'   => 'rectangle'
+																	],																								 
+											   ]
+						],                      
+                        
+                    ]
+                ]
+            ]
+        ];
+        return $config; 
+    }
+    
+    /**
+    * Create the button style for desktop configurations
+    *
+    * @param array $config
+    *
+    * @return array
+    */
+    public function createButtonStyleDesktopConfiguration($config)
+    {
+        $config['steps']['novalnetButtonStyleDesktopConf'] =
+        [
+            "title" => 'WhatApp Button Style Desktop',
+            "sections" => [
+                [
+                    "title"         => 'WhatApp Button Style Desktop',
+                    "description"   => '',
+                    "form"          =>
+                    [
+                        'desktopTheme' =>
+						[
+							'type'          => 'select',
+							'defaultValue'  => 'green',
+							'options'       => [
+												'name'          => 'Button Theme for Desktop',
+												'listBoxValues' => [
+																		'caption' => 'Green',
+																		'value'   => 'green'
+																	],
+																	
+																	[
+																		'caption' => 'White',
+																		'value'   => 'white'
+																	],																								 
+											   ]
+						],
+						
+						'desktopShape' =>
+						[
+							'type'          => 'select',
+							'defaultValue'  => 'circle',
+							'options'       => [
+												'name'          => 'Button Shape for Desktop',
+												'listBoxValues' => [
+																		'caption' => 'Circle',
+																		'value'   => 'circle'
+																	],
+																	
+																	[
+																		'caption' => 'Rectangle',
+																		'value'   => 'rectangle'
+																	],																								 
+											   ]
+						],                      
+                        
+                    ]
+                ]
+            ]
+        ];
+        return $config; 
+    }
+    
 }
