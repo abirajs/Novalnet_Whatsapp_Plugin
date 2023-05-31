@@ -55,10 +55,10 @@ class NovalnetAssistant extends WizardProvider
     {
         $config =
         [
-            "title" => 'Novalnet Whatsapp',
-            "shortDescription" => 'Secure and Trust',
+            "title" => 'NovalnetAssistant.novalnetAssistantTitle',
+            "shortDescription" => 'NovalnetAssistant.novalnetAssistantShortDescription',
             "iconPath" => $this->getIcon(),
-	    "settingsHandlerClass" => NovalnetAssistantSettingsHandler::class,
+            "settingsHandlerClass" => NovalnetAssistantSettingsHandler::class,
             "translationNamespace" => 'NovalnetWhatsapp',
             "key" => 'template-novalnet-assistant',
             "topics" => ['template'],
@@ -70,7 +70,7 @@ class NovalnetAssistant extends WizardProvider
                     'type'          => 'select',
                     'defaultValue'  => $this->getMainWebstore(),
                     'options'       => [
-                                        'name'          => 'clientId',
+                                        'name'          => 'NovalnetAssistant.clientId',
                                         'required'      => true,
                                         'listBoxValues' => $this->getWebstoreListForm(),
                                        ],
@@ -144,11 +144,11 @@ class NovalnetAssistant extends WizardProvider
     {
         $config['steps']['novalnetGeneralConf'] =
         [
-            "title" => 'General',
+            "title" => 'NovalnetAssistant.GeneralConf',
             "sections" => [
                 [
-                    "title"         => 'General',
-                    "description"   => 'Create your WhatsApp Chat and customize it',
+                    "title"         => 'NovalnetAssistant.GeneralConf',
+                    "description"   => 'NovalnetAssistant.GeneralConfDesc',
                     "form"          =>
                     [
                         'enableChat' =>
@@ -163,8 +163,8 @@ class NovalnetAssistant extends WizardProvider
 						'chatHeading' =>
                         [
                             'type'      => 'text',
-                            'options'   => [
-                                            'name'      => 'Chat Heading',
+                            'options'   => [				
+                                            'name'      => 'NovalnetAssistant.chatHeading',
                                             'required'  => true
                                            ]
                         ],
@@ -173,7 +173,7 @@ class NovalnetAssistant extends WizardProvider
                         [
                             'type'      => 'text',
                             'options'   => [
-                                            'name'      => 'chat Description',
+                                            'name'      => 'NovalnetAssistant.chatDescription',
                                             'required'  => true,                                           
                                            ]
                         ],                       
@@ -197,18 +197,18 @@ class NovalnetAssistant extends WizardProvider
     {
         $config['steps']['novalnetAccountConf'] =
         [
-            "title" => 'Account Settings',
+            "title" => 'NovalnetAssistant.novalnetWebhookConf',  
             "sections" => [
                 [
-                    "title"         => 'Account Settings',
+                    "title"         => 'NovalnetAssistant.novalnetWebhookConf',
                     "description"   => '',
                     "form"          =>
                     [
                         'mobileNumber' =>
                         [
-                            'type'         => 'text',
+                            'type'         => 'text',	
                             'options'   => [
-                                            'name'  => 'Mobile Number',
+                                            'name'  => 'NovalnetAssistant.mobileNumber',
                                             'required'  => true
                                            ]
                         ],
@@ -217,7 +217,7 @@ class NovalnetAssistant extends WizardProvider
                         [
                             'type'      => 'text',
                             'options'   => [
-                                            'name'      => 'Account Name',
+                                            'name'      => 'NovalnetAssistant.accountName',
                                             'required'  => true
                                            ]
                         ],
@@ -226,7 +226,7 @@ class NovalnetAssistant extends WizardProvider
                         [
                             'type'      => 'text',
                             'options'   => [
-                                            'name'      => 'Account Role',
+                                            'name'      => 'NovalnetAssistant.accountRole',
                                             'required'  => true,                                           
                                            ]
                         ],  
@@ -235,7 +235,7 @@ class NovalnetAssistant extends WizardProvider
 					    [
 							'type'      => 'file',
 							'options'   => [
-											'name'              => 'Profile',
+											'name'              => 'NovalnetAssistant.profile',
 											'showPreview'       => true,
 											'allowedExtensions' => ['svg', 'png', 'jpg', 'jpeg'],
 											'allowFolders'      => false
@@ -259,11 +259,11 @@ class NovalnetAssistant extends WizardProvider
     {
         $config['steps']['novalnetURLConf'] =
         [	
-            "title" => 'WhatApp Redirect URL Configuration',
+            "title" => 'NovalnetAssistant.novalnetURLConf',
             "sections" => [
                 [
-                    "title"         => 'WhatApp Redirect URL Configuration',
-                    "description"   => 'The URL will be redirect from your config settings',
+                    "title"         => 'NovalnetAssistant.novalnetURLConf',
+                    "description"   => 'NovalnetAssistant.novalnetURLConfDesc',
                     "form"          =>
                     [
                         'openNewTab' =>
@@ -271,7 +271,7 @@ class NovalnetAssistant extends WizardProvider
                             'type'         => 'checkbox',
                             'defaultValue' => true,
                             'options'   => [
-                                            'name'  => 'Open chat url in new tab'
+                                            'name'  => 'NovalnetAssistant.openNewTab'
                                            ]
                         ],
                         
@@ -280,7 +280,7 @@ class NovalnetAssistant extends WizardProvider
 							'type'          => 'select',
 							'defaultValue'  => 'web',
 							'options'       => [
-												'name'          => 'URL for Desktop',
+												'name'          => 'NovalnetAssistant.URLforDesktop',
 												'listBoxValues' => [
 																		[
 																			'caption' => 'Web',
@@ -306,7 +306,7 @@ class NovalnetAssistant extends WizardProvider
 							'type'          => 'select',
 							'defaultValue'  => 'universal',
 							'options'       => [
-												'name'          => 'URL for Mobile',
+												'name'          => 'NovalnetAssistant.URLforMobile',
 												'listBoxValues' => [
 																		[	'caption' => 'Universal',
 																			'value'   => 'universal'
@@ -343,20 +343,20 @@ class NovalnetAssistant extends WizardProvider
     public function createButtonStyleMobileConfiguration($config)
     {
         $config['steps']['novalnetButtonStyleMobileConf'] =
-        [
-            "title" => 'WhatApp Button Style Mobile',
+        [	
+            "title" => 'NovalnetAssistant.novalnetButtonStyleMobileConf',
             "sections" => [
                 [
-                    "title"         => 'WhatApp Button Style Mobile',
+                    "title"         => 'NovalnetAssistant.novalnetButtonStyleMobileConf',
                     "description"   => '',
                     "form"          =>
                     [
                         'mobileTheme' =>
-						[
+						[	
 							'type'          => 'select',
 							'defaultValue'  => 'green',
 							'options'       => [
-												'name'          => 'Button Theme for Mobile',
+												'name'          => 'NovalnetAssistant.mobileTheme',
 												'listBoxValues' => [
 																		[	'caption' => 'Green',
 																			'value'   => 'green'
@@ -371,11 +371,11 @@ class NovalnetAssistant extends WizardProvider
 						],
 						
 						'mobileShape' =>
-						[
+						[	
 							'type'          => 'select',
 							'defaultValue'  => 'circle',
 							'options'       => [
-												'name'          => 'Button Shape for Desktop',
+												'name'          => 'NovalnetAssistant.mobileShape',
 												'listBoxValues' => [
 																		[	'caption' => 'Circle',
 																			'value'   => 'circle'
@@ -406,11 +406,11 @@ class NovalnetAssistant extends WizardProvider
     public function createButtonStyleDesktopConfiguration($config)
     {
         $config['steps']['novalnetButtonStyleDesktopConf'] =
-        [
-            "title" => 'WhatApp Button Style Desktop',
+        [	
+            "title" => 'NovalnetAssistant.novalnetButtonStyleDesktopConf',
             "sections" => [
                 [
-                    "title"         => 'WhatApp Button Style Desktop',
+                    "title"         => 'NovalnetAssistant.novalnetButtonStyleDesktopConf',
                     "description"   => '',
                     "form"          =>
                     [
@@ -418,8 +418,8 @@ class NovalnetAssistant extends WizardProvider
 						[
 							'type'          => 'select',
 							'defaultValue'  => 'green',
-							'options'       => [
-												'name'          => 'Button Theme for Desktop',
+							'options'       => [	
+												'name'          => 'NovalnetAssistant.desktopTheme',
 												'listBoxValues' => [
 																		[	'caption' => 'Green',
 																			'value'   => 'green'
@@ -438,7 +438,7 @@ class NovalnetAssistant extends WizardProvider
 							'type'          => 'select',
 							'defaultValue'  => 'circle',
 							'options'       => [
-												'name'          => 'Button Shape for Desktop',
+												'name'          => 'NovalnetAssistant.desktopShape',
 												'listBoxValues' => [
 																		[	'caption' => 'Circle',
 																			'value'   => 'circle'
