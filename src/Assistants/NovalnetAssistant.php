@@ -9,7 +9,7 @@
 
 namespace NovalnetWhatsapp\Assistants;
 
-
+use NovalnetWhatsapp\Assistants\SettingsHandlers\NovalnetAssistantSettingsHandler;
 use Plenty\Modules\Wizard\Services\WizardProvider;
 use Plenty\Modules\System\Contracts\WebstoreRepositoryContract;
 use Plenty\Plugin\Application;
@@ -58,6 +58,7 @@ class NovalnetAssistant extends WizardProvider
             "title" => 'Novalnet Whatsapp',
             "shortDescription" => 'Secure and Trust',
             "iconPath" => $this->getIcon(),
+	    "settingsHandlerClass" => NovalnetAssistantSettingsHandler::class,
             "translationNamespace" => 'NovalnetWhatsapp',
             "key" => 'template-novalnet-assistant',
             "topics" => ['template'],
