@@ -7,9 +7,9 @@
  * @copyright(C) Novalnet
  * @license      https://www.novalnet.de/payment-plugins/kostenlos/lizenz
  */
-namespace Novalnet\Services;
+namespace NovalnetWhatsapp\Services;
 
-use Novalnet\Models\Settings;
+use NovalnetWhatsapp\Models\Settings;
 use Carbon\Carbon;
 use Plenty\Modules\Plugin\DataBase\Contracts\DataBase;
 use Plenty\Modules\Plugin\PluginSet\Contracts\PluginSetRepositoryContract;
