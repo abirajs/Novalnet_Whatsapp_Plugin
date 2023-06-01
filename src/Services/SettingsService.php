@@ -125,5 +125,5 @@ class SettingsService
             /** $this->getLogger(__METHOD__)->error('Settings', $paymentKey); */
             return null;
     }
-}
+
 }
