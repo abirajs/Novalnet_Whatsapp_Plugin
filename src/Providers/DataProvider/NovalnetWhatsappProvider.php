@@ -20,11 +20,12 @@ class NovalnetWhatsappProvider extends ServiceProvider
 	$chatHeading 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_chat_heading');
 	$chatDescription	= $settingsService->getPaymentSettingsValue('nn_whatsapp_chat_description');
 	$sccountName 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_account_name');
+	$sccountRole		= $settingsService->getPaymentSettingsValue('nn_whatsapp_account_role');
 	$mobileNumber 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_mobile_number');
 	$profileLogo 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_profile_logo');
 	$openNewTab 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_open_new_tab');
 	$desktopURL 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_url_desktop');
-	$mobileURL 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_url_mobile');
+	$mobileURL 			= $settingsService->getPaymentSettingsValue('nn_whatsapp_url_mobile');
 	$mobileTheme 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_mobile_theme');
 	$mobileShape 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_mobile_shape');
 	$desktopTheme 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_desktop_theme');
@@ -34,8 +35,11 @@ class NovalnetWhatsappProvider extends ServiceProvider
         return $twig->render('NovalnetWhatsapp::NovalnetWhatsappDataProvider',
 			     [
 				'accountName' 		=>  $accountName,		
+				'accountRole' 		=>  $accountRole,		
 				'chatHeading' 		=>  $chatHeading,		
 				'chatDescription' 	=>  $chatDescription,		
+				'mobileNumber' 	   	=>  $mobileNumber,		
+				'profileLogo' 	    	=>  $profileLogo,		
 				'openNewTab' 		=>  $openNewTab,		
 				'desktopURL' 		=>  $desktopURL,		
 				'mobileURL' 		=>  $mobileURL,		
