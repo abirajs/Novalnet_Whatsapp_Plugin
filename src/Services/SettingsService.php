@@ -107,11 +107,14 @@ class SettingsService
         $this->getLogger(__METHOD__)->error('settings', $settings);
         if(!is_null($settings)) {
             if(!empty($paymentKey) && isset($settings->value[$paymentKey])) {
+		$this->getLogger(__METHOD__)->error('key', $settings);   
                 return $settings->value[$paymentKey][$settingsKey];
             } else {
-                return $settings->value[$settingsKey];
+		$this->getLogger(__METHOD__)->error('value', $settings);    
+                return $settings;
             }
         }
+	    $this->getLogger(__METHOD__)->error('null', $settings);
             return null;
     }
 }
