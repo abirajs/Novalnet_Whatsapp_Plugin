@@ -21,7 +21,7 @@ class NovalnetWhatsappProvider extends ServiceProvider
 	$this->getLogger(__METHOD__)->error('AccountName', $accountName);
         return $twig->render('NovalnetWhatsapp::NovalnetWhatsappDataProvider',
 			     [
-				 'accountName' =>  'test',		
+				 'accountName' =>  $accountName,		
 			     ]);
     }
 }
