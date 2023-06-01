@@ -34,7 +34,7 @@ alert(jQuery('#nn_whatsapp_is_mobile').val());
 			alert(apiEndPoint);
 		}		
 	} 
-    alert(jQuery('#nn_whatsapp_desktop_url').val());
+    alert(jQuery('#nn_whatsapp_desktop_URL').val());
     // Find the desktop devices and redirect the api endpoint url
     if(jQuery('#nn_whatsapp_is_mobile').val() == 'false') {
 		if(jQuery('#nn_whatsapp_desktop_URL').val() == 'web') {
