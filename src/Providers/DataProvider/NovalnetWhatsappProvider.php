@@ -33,13 +33,8 @@ class NovalnetWhatsappProvider extends ServiceProvider
 	$mobileShape 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_mobile_shape');
 	$desktopTheme 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_desktop_theme');
 	$desktopShape 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_desktop_shape');
-	
-	$getisMobile 		= $whatsappHelper->getIsMobile();
 	$isMobile		= $whatsappHelper->isMobile();
 	    
-	$this->getLogger(__METHOD__)->error('ProfileLogo', $profileLogo);
-	$this->getLogger(__METHOD__)->error('getisMobile', $getisMobile);
-	$this->getLogger(__METHOD__)->error('isMobile', $isMobile);
 	    
 	if($enableChat == 'true') { 
 		return $twig->render('NovalnetWhatsapp::NovalnetWhatsappDataProvider',
@@ -56,7 +51,8 @@ class NovalnetWhatsappProvider extends ServiceProvider
 								'mobileTheme' 		=>  $mobileTheme,		
 								'mobileShape' 		=>  $mobileShape,		
 								'desktopTheme' 		=>  $desktopTheme,		
-								'desktopShape' 		=>  $desktopShape,		
+								'desktopShape' 		=>  $desktopShape,
+								'isMobile'              =>  $isMobile,
 							]);
 	} else {
 		return '';
