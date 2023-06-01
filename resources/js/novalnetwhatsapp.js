@@ -29,7 +29,7 @@ function whatsapp(id) {
 		} else if(jQuery('#nn_whatsapp_mobile_url').val() == 'api') {
 			apiEndPoint = apiEndPoint+'api.whatsapp.com/send?phone=' + phone + '&text=' + (message);
 			alert(apiEndPoint);
-		}	else {
+		} else if(jQuery('#nn_whatsapp_mobile_url').val() == 'universal') {
 			apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
 			alert(apiEndPoint);
 		}		
@@ -43,7 +43,7 @@ function whatsapp(id) {
 		} else if(jQuery('#nn_whatsapp_desktop_url').val() == 'api') {
 			apiEndPoint = apiEndPoint+'api.whatsapp.com/send?phone=' + phone + '&text=' + (message);
 			alert(apiEndPoint);
-		}	else {
+		} else if(jQuery('#nn_whatsapp_desktop_url').val() == 'universal') {
 			apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
 			alert(apiEndPoint);
 		}		
