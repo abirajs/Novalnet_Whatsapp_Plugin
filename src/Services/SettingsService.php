@@ -112,6 +112,6 @@ class SettingsService
                 return $settings->value[$settingsKey];
             }
         }
-            return $settings->value[$settingsKey];
+            return null;
     }
 }
