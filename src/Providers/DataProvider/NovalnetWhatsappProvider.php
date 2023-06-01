@@ -16,7 +16,8 @@ class NovalnetWhatsappProvider extends ServiceProvider
     public function call(Twig $twig):string
     {
        	$settingsService    = pluginApp(SettingsService::class);
-	$accountName = $this->settingsService->getPaymentSettingsValue('nn_whatsapp_account_name');
+	//~ $accountName 		= $this->settingsService->getPaymentSettingsValue('nn_whatsapp_enable_chat');
+	$accountName 		= 'test';
 	$this->getLogger(__METHOD__)->error('AccountName', $accountName);
         return $twig->render('NovalnetWhatsapp::NovalnetWhatsappDataProvider',
 			     [
