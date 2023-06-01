@@ -100,7 +100,7 @@ class SettingsService
      *
      * @return mixed
      */
-    public function getPaymentSettingsValue($settingsKey, $paymentKey = null, $clientId = null, $pluginSetId = null)
+    public function getPaymentSettingsValue($settingsKey = null, $paymentKey = null, $clientId = null, $pluginSetId = null)
     {
         
         $settings = $this->getSettings($clientId, $pluginSetId);
