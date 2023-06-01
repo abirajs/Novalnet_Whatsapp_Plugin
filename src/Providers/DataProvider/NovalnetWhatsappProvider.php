@@ -31,23 +31,27 @@ class NovalnetWhatsappProvider extends ServiceProvider
 	$desktopTheme 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_desktop_theme');
 	$desktopShape 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_desktop_shape');
 	
-	$this->getLogger(__METHOD__)->error('AccountName', $accountName);
-        return $twig->render('NovalnetWhatsapp::NovalnetWhatsappDataProvider',
-			     [
-				'accountName' 		=>  $accountName,		
-				'accountRole' 		=>  $accountRole,		
-				'chatHeading' 		=>  $chatHeading,		
-				'chatDescription' 	=>  $chatDescription,		
-				'mobileNumber' 	   	=>  $mobileNumber,		
-				'profileLogo' 	    	=>  $profileLogo,		
-				'openNewTab' 		=>  $openNewTab,		
-				'desktopURL' 		=>  $desktopURL,		
-				'mobileURL' 		=>  $mobileURL,		
-				'mobileTheme' 		=>  $mobileTheme,		
-				'mobileShape' 		=>  $mobileShape,		
-				'desktopTheme' 		=>  $desktopTheme,		
-				'desktopShape' 		=>  $desktopShape,		
-				     
-			     ]);
+	$this->getLogger(__METHOD__)->error('ProfileLogo', $profileLogo);
+	    
+	if($enableChat == 'true') { 
+		return $twig->render('NovalnetWhatsapp::NovalnetWhatsappDataProvider',
+							[
+								'accountName' 		=>  $accountName,		
+								'accountRole' 		=>  $accountRole,		
+								'chatHeading' 		=>  $chatHeading,		
+								'chatDescription' 	=>  $chatDescription,		
+								'mobileNumber' 	    =>  $mobileNumber,		
+								'profileLogo' 	    =>  $profileLogo,		
+								'openNewTab' 		=>  $openNewTab,		
+								'desktopURL' 		=>  $desktopURL,		
+								'mobileURL' 		=>  $mobileURL,		
+								'mobileTheme' 		=>  $mobileTheme,		
+								'mobileShape' 		=>  $mobileShape,		
+								'desktopTheme' 		=>  $desktopTheme,		
+								'desktopShape' 		=>  $desktopShape,		
+							]);
+	} else {
+		return '';
+	}
     }
 }
