@@ -99,7 +99,7 @@ class SettingsService
      * @param int $pluginSetId
      *
      * @return mixed
-     */
+     
     public function getPaymentSettingsValue($settingsKey = null, $paymentKey = null, $clientId = null, $pluginSetId = null)
     {
         
@@ -107,4 +107,23 @@ class SettingsService
         $this->getLogger(__METHOD__)->error('settings', $settings);
 	return 1;
     }
+*/
+    public function getPaymentSettingsValue($settingsKey, $paymentKey = null, $clientId = null, $pluginSetId = null)
+    {
+        
+        $settings = $this->getSettings($clientId, $pluginSetId);
+         $this->getLogger(__METHOD__)->error('SettingsReturn', $settings); 
+        if(!is_null($settings)) {
+            if(!empty($paymentKey) && isset($settings->value[$paymentKey])) {
+                $this->getLogger(__METHOD__)->error('SettingsPaymentKey', $settings->value[$paymentKey]); 
+                return $settings->value[$paymentKey][$settingsKey];
+            } else {
+                $this->getLogger(__METHOD__)->error('PaymentKey', $settings->value[$settingsKey]); 
+                return $settings->value[$settingsKey];   
+            }
+        }
+            /** $this->getLogger(__METHOD__)->error('Settings', $paymentKey); */
+            return null;
+    }
+}
 }
