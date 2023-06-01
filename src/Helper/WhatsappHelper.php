@@ -18,18 +18,11 @@ class WhatsappHelper
 {
     use Loggable;
 
-
     /**
      * Find the mobile device or not
      *
      * @return string
-     */
-    public function getIsMobile()
-    {
-       $test = 'test';
-       return $test;
-    }
-    
+    */
     public function isMobile() 
     {
         $useragent=$_SERVER['HTTP_USER_AGENT'];
