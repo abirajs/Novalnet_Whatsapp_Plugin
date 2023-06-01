@@ -15,20 +15,20 @@
 		
 		<div class="whatsapp-header" style="height:70px;width:350px;background-color: #075e54;color:white;align-items:center;padding-top:10px;border-radius:6px 6px 0 0;">
 			<div style="float:left;padding-left:15px;margin-top:10px; font-weight: bold;">
-				Whatsapp Chat
+				{{chatHeading}}
 			</div>
 			<div class="whatsapp-cancel" style="float:right;padding-right:15px;cursor:pointer; font-weight: bold;">
 				X
 			</div>
 		</div>
 		
-		<div style="height:60px;width:350px;background-color: white;padding:5px 0px">Hi Guest! Please click one of our representative Below To Chat on Whatsapp</div>
+		<div style="height:60px;width:350px;background-color: white;padding:5px 0px">{{chatDescription}}</div>
 		
-		<div style="height:85px;width:350px;background-color: white;display:flex;padding:20px 0px" class="member1" id="manager" onclick="whatsapp(1)" phone="8754754860">
+		<div style="height:85px;width:350px;background-color: white;display:flex;padding:20px 0px" class="member1" id="manager" onclick="whatsapp(1)" phone="{{mobileNumber}}">
 			<div><img src="{{plugin_path('NovalnetWhatsapp')}}/images/manager.png" alt="whatsapp-chat" width="50" height="50" style="border-radius: 50%;cursor:pointer"></div>
 			<div style="margin-left:10px">
 				<div style="font-weight: bold;cursor:pointer" value="{{accountName}}">{{accountName}}</div>
-				<div style="cursor:pointer;font-size:14px;">Manager</div>
+				<div style="cursor:pointer;font-size:14px;" value="{{accountRole}}">{{accountRole}}</div>
 			</div>
 		</div>
 		
