@@ -17,7 +17,7 @@ function isMobile() {
   
 function whatsapp(id) {
     var isMobileTrue = isMobile();
-    var apiEndPoint = 'https://';
+    var apiEndPoint = 'http://';
     var phone   =  $('.member'+id).attr("phone");
     var message =  'Hi how can i help you..'; 
 alert(jQuery('#nn_whatsapp_is_mobile').val());
