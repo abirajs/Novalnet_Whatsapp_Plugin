@@ -99,14 +99,6 @@ class SettingsService
      * @param int $pluginSetId
      *
      * @return mixed
-     
-    public function getPaymentSettingsValue($settingsKey = null, $paymentKey = null, $clientId = null, $pluginSetId = null)
-    {
-        
-        $settings = $this->getSettings($clientId, $pluginSetId);
-        $this->getLogger(__METHOD__)->error('settings', $settings);
-	return 1;
-    }
 */
     public function getPaymentSettingsValue($settingsKey, $paymentKey = null, $clientId = null, $pluginSetId = null)
     {
