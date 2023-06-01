@@ -19,8 +19,8 @@ class NovalnetWhatsappProvider extends ServiceProvider
 	$enableChat 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_enable_chat');
 	$chatHeading 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_chat_heading');
 	$chatDescription	= $settingsService->getPaymentSettingsValue('nn_whatsapp_chat_description');
-	$sccountName 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_account_name');
-	$sccountRole		= $settingsService->getPaymentSettingsValue('nn_whatsapp_account_role');
+	$accountName 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_account_name');
+	$accountRole		= $settingsService->getPaymentSettingsValue('nn_whatsapp_account_role');
 	$mobileNumber 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_mobile_number');
 	$profileLogo 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_profile_logo');
 	$openNewTab 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_open_new_tab');
