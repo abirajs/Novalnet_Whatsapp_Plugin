@@ -22,5 +22,9 @@ function whatsapp(id) {
     var message =  'Hi how can i help you..'; 
     apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
     alert(apiEndPoint);
+    if(jQuery('#nn_unique_id').val() == 'true') {
     window.open(apiEndPoint);
+	 } else {
+	 window.location.href = apiEndPoint;
+    }	
 }
