@@ -2,6 +2,7 @@
 
 namespace NovalnetWhatsapp\Providers\DataProvider;
 
+use NovalnetWhatsapp\Services\SettingsService;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
 use Plenty\Plugin\Log\Loggable;
