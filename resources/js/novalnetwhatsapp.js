@@ -27,7 +27,7 @@ function whatsapp(id) {
 			apiEndPoint = apiEndPoint+'web.whatsapp.com/send?phone=' + phone + '&text=' + (message);
 			alert(apiEndPoint);
 		} else if(jQuery('#nn_whatsapp_mobile_url').val() == 'api') {
-			aapiEndPoint = apiEndPoint+'api.whatsapp.com/send?phone=' + phone + '&text=' + (message);
+			apiEndPoint = apiEndPoint+'api.whatsapp.com/send?phone=' + phone + '&text=' + (message);
 			alert(apiEndPoint);
 		}	else {
 			apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
@@ -41,7 +41,7 @@ function whatsapp(id) {
 			apiEndPoint = apiEndPoint+'web.whatsapp.com/send?phone=' + phone + '&text=' + (message);
 			alert(apiEndPoint);
 		} else if(jQuery('#nn_whatsapp_desktop_url').val() == 'api') {
-			aapiEndPoint = apiEndPoint+'api.whatsapp.com/send?phone=' + phone + '&text=' + (message);
+			apiEndPoint = apiEndPoint+'api.whatsapp.com/send?phone=' + phone + '&text=' + (message);
 			alert(apiEndPoint);
 		}	else {
 			apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
@@ -51,8 +51,8 @@ function whatsapp(id) {
     
     // set the new tab open redirect page
     if(jQuery('#nn_whatsapp_open_new_tab').val() == 'true') {
-		window.open(apiEndPoint);
-		} else {
-		window.location.href = apiEndPoint;
-	}		
+	window.open(apiEndPoint);
+    } else {
+	window.location.href = apiEndPoint;
+    }		
 }
