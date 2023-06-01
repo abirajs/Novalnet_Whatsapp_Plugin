@@ -17,7 +17,7 @@ function isMobile() {
   
 function whatsapp(id) {
     var isMobileTrue = isMobile();
-    var apiEndPoint = 'http://';
+    var apiEndPoint = 'https://';
     var phone   =  $('.member'+id).attr("phone");
     var message =  'Hi how can i help you..'; 
 alert(jQuery('#nn_whatsapp_is_mobile').val());
@@ -34,7 +34,7 @@ alert(jQuery('#nn_whatsapp_is_mobile').val());
 			alert(apiEndPoint);
 		}		
 	} 
-    
+    alert(jQuery('#nn_whatsapp_desktop_url').val());
     // Find the desktop devices and redirect the api endpoint url
     if(jQuery('#nn_whatsapp_is_mobile').val() == 'false') {
 		if(jQuery('#nn_whatsapp_desktop_url').val() == 'web') {
