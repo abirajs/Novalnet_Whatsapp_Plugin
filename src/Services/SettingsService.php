@@ -112,17 +112,13 @@ class SettingsService
     {
         
         $settings = $this->getSettings($clientId, $pluginSetId);
-         $this->getLogger(__METHOD__)->error('SettingsReturn', $settings); 
         if(!is_null($settings)) {
             if(!empty($paymentKey) && isset($settings->value[$paymentKey])) {
-                $this->getLogger(__METHOD__)->error('SettingsPaymentKey', $settings->value[$paymentKey]); 
                 return $settings->value[$paymentKey][$settingsKey];
             } else {
-                $this->getLogger(__METHOD__)->error('PaymentKey', $settings->value[$settingsKey]); 
                 return $settings->value[$settingsKey];   
             }
         }
-            /** $this->getLogger(__METHOD__)->error('Settings', $paymentKey); */
             return null;
     }
 
