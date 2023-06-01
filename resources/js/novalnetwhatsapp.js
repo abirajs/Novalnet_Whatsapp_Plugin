@@ -20,7 +20,7 @@ function whatsapp(id) {
     var apiEndPoint = 'https://';
     var phone   =  $('.member'+id).attr("phone");
     var message =  'Hi how can i help you..'; 
-	
+alert(jQuery('#nn_whatsapp_is_mobile').val());
     // Find the mobile devices and redirect the api endpoint url
     if(jQuery('#nn_whatsapp_is_mobile').val() == 'true') {
 		if(jQuery('#nn_whatsapp_mobile_url').val() == 'web') {
@@ -48,7 +48,7 @@ function whatsapp(id) {
 			alert(apiEndPoint);
 		}		
 	} 
-    
+  alert(apiEndPoint);  
     // set the new tab open redirect page
     if(jQuery('#nn_whatsapp_open_new_tab').val() == 'true') {
 	window.open(apiEndPoint);
