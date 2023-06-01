@@ -20,12 +20,39 @@ function whatsapp(id) {
     var apiEndPoint = 'https://';
     var phone   =  $('.member'+id).attr("phone");
     var message =  'Hi how can i help you..'; 
-    apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
-    alert(apiEndPoint);
 	
+    // Find the mobile devices and redirect the api endpoint url
+    if(jQuery('#nn_whatsapp_is_mobile').val() == 'true') {
+		if(jQuery('#nn_whatsapp_mobile_url').val() == 'web') {
+			apiEndPoint = apiEndPoint+'web.whatsapp.com/send?phone=' + phone + '&text=' + (message);
+			alert(apiEndPoint);
+		} else if(jQuery('#nn_whatsapp_mobile_url').val() == 'api') {
+			aapiEndPoint = apiEndPoint+'api.whatsapp.com/send?phone=' + phone + '&text=' + (message);
+			alert(apiEndPoint);
+		}	else {
+			apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
+			alert(apiEndPoint);
+		}		
+	} 
+    
+    // Find the desktop devices and redirect the api endpoint url
+    if(jQuery('#nn_whatsapp_is_mobile').val() == 'false') {
+		if(jQuery('#nn_whatsapp_desktop_url').val() == 'web') {
+			apiEndPoint = apiEndPoint+'web.whatsapp.com/send?phone=' + phone + '&text=' + (message);
+			alert(apiEndPoint);
+		} else if(jQuery('#nn_whatsapp_desktop_url').val() == 'api') {
+			aapiEndPoint = apiEndPoint+'api.whatsapp.com/send?phone=' + phone + '&text=' + (message);
+			alert(apiEndPoint);
+		}	else {
+			apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
+			alert(apiEndPoint);
+		}		
+	} 
+    
+    // set the new tab open redirect page
     if(jQuery('#nn_whatsapp_open_new_tab').val() == 'true') {
-    window.open(apiEndPoint);
-	 } else {
-	 window.location.href = apiEndPoint;
-    }	
+		window.open(apiEndPoint);
+		} else {
+		window.location.href = apiEndPoint;
+	}		
 }
