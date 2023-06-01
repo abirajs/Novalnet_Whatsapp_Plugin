@@ -3,6 +3,7 @@
 namespace NovalnetWhatsapp\Providers\DataProvider;
 
 use NovalnetWhatsapp\Services\SettingsService;
+use NovalnetWhatsapp\Helper\WhatsappHelper;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
 use Plenty\Plugin\Log\Loggable;
@@ -16,6 +17,8 @@ class NovalnetWhatsappProvider extends ServiceProvider
     public function call(Twig $twig):string
     {
        	$settingsService        = pluginApp(SettingsService::class);
+	$whatsappHelper         = pluginApp(WhatsappHelper::class);
+	
 	$enableChat 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_enable_chat');
 	$chatHeading 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_chat_heading');
 	$chatDescription	= $settingsService->getPaymentSettingsValue('nn_whatsapp_chat_description');
@@ -25,7 +28,7 @@ class NovalnetWhatsappProvider extends ServiceProvider
 	$profileLogo 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_profile_logo');
 	$openNewTab 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_open_new_tab');
 	$desktopURL 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_url_desktop');
-	$mobileURL 			= $settingsService->getPaymentSettingsValue('nn_whatsapp_url_mobile');
+	$mobileURL 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_url_mobile');
 	$mobileTheme 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_mobile_theme');
 	$mobileShape 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_mobile_shape');
 	$desktopTheme 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_desktop_theme');
