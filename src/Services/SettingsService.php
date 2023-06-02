@@ -60,7 +60,7 @@ class SettingsService
             $pluginSetRepositoryContract = pluginApp(PluginSetRepositoryContract::class);
             $pluginSetId = $pluginSetRepositoryContract->getCurrentPluginSetId();
         }
-        /** @var Settings[] $setting */
+        /** @var Settings[] setting variable */
         $settings = $this->database->query(Settings::class)->where('clientId', '=', $clientId)
                                   ->where('pluginSetId', '=', $pluginSetId)
                                   ->get();
