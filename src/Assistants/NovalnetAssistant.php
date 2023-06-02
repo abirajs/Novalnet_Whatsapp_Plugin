@@ -36,15 +36,53 @@ class NovalnetAssistant extends WizardProvider
 
     /**
      * @var $webstoreValues
-     */
+    */
     private $webstoreValues;
 
-
+     /**
+     * @var $getIcon
+     */
+     private $getIcon;
+	
+     /**
+     * @var $getMainWebstore
+     */
+     private $getMainWebstore;
+	
+     /**
+     * @var $getWebstoreListForm
+     */
+     private $getWebstoreListForm;
+	
+     /**
+     * @var $createGeneralConfiguration
+     */
+     private $createGeneralConfiguration;
+	
+    /**
+    * @var $createAccountConfiguration
+    */
+    private $createAccountConfiguration;
+	
+    /**
+    * @var $createURLConfiguration
+    */
+    private $createURLConfiguration;
+	
+    /**
+    * @var $createButtonStyleMobileConfiguration
+    */
+    private $createButtonStyleMobileConfiguration;
+	
+    /**
+    * @var $createButtonStyleDesktopConfiguration
+    */
+    private $createButtonStyleDesktopConfiguration;
+	
     /**
     * Constructor.
     *
     * @param WebstoreRepositoryContract $webstoreRepository
-    * @param PaymentHelper $paymentHelper
     */
     public function __construct(WebstoreRepositoryContract $webstoreRepository)
     {
