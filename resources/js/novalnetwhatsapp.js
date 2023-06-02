@@ -40,8 +40,7 @@ alert(jQuery('#nn_whatsapp_is_mobile').val());
 			apiEndPoint = apiEndPoint+'wa.me/' + phone + '?text=' + (message);
 			alert(apiEndPoint);
 		}		
-	} 
-  alert(apiEndPoint);  
+	}  
     // set the new tab open redirect page
     if(jQuery('#nn_whatsapp_open_new_tab').val() == 1) {
 	window.open(apiEndPoint);
