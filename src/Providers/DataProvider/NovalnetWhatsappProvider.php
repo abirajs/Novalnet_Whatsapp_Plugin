@@ -35,6 +35,7 @@ class NovalnetWhatsappProvider extends ServiceProvider
 	$desktopShape 		= $settingsService->getPaymentSettingsValue('nn_whatsapp_desktop_shape');
 	$isMobile		= $whatsappHelper->isMobile();
 	    
+	$this->getLogger(__METHOD__)->alert('profileLogo', $profileLogo);
 	    
 	if($enableChat == 'true') { 
 		return $twig->render('NovalnetWhatsapp::NovalnetWhatsappDataProvider',
