@@ -21,9 +21,50 @@
 <input type="hidden" name="nn_whatsapp_desktop_shape"  id="nn_whatsapp_desktop_shape" value="{{desktopShape}}">
 
 {# Set a whatsapp widjets #}
-<div>
-<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppRoundGreen.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
-</div>
+{% if (isMobile == false)  %}
+    {% if (mobileTheme == 'green') and (mobileShape == 'circle') %}
+		<div>
+		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppRoundGreen.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
+		</div>
+    {% endif %}
+    {% if (mobileTheme == 'white') and (mobileShape == 'circle') %}
+		<div>
+		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppRoundWhite.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
+		</div>
+    {% endif %}
+    {% if (mobileTheme == 'green') and (mobileShape == 'rectangle') %}
+		<div>
+		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppSquareGreen.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
+		</div>
+    {% endif %}
+    {% if (mobileTheme == 'white') and (mobileShape == 'rectangle') %}
+		<div>
+		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppSquareWhite.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
+		</div>
+    {% endif %}
+
+{% else %}
+        {% if (mobileTheme == 'green') and (mobileShape == 'circle') %}
+		<div>
+		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppRoundGreen.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
+		</div>
+    {% endif %}
+    {% if (mobileTheme == 'white') and (mobileShape == 'circle') %}
+		<div>
+		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppRoundWhite.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
+		</div>
+    {% endif %}
+    {% if (mobileTheme == 'green') and (mobileShape == 'rectangle') %}
+		<div>
+		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppSquareGreen.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
+		</div>
+    {% endif %}
+    {% if (mobileTheme == 'white') and (mobileShape == 'rectangle') %}
+		<div>
+		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppSquareWhite.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
+		</div>
+    {% endif %}
+{% endif %}
 
 {# Set a whatsapp container #}
 	<div  class="whatsappcontainer" style="display:none;height:260px;width:350px;">	
