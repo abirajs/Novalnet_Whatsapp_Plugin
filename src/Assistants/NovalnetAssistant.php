@@ -175,7 +175,7 @@ class NovalnetAssistant extends WizardProvider
                             'options'   => [
                                             'name'      => 'NovalnetAssistant.chatDescription',
                                             'required'  => true,   
-				    	    'maxLength' => 60
+				    	    'maxLength' => 70
                                            ]
                         ],                       
                         
