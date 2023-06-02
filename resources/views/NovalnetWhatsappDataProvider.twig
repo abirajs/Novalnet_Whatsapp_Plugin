@@ -22,22 +22,22 @@
 
 {# Set a whatsapp widjets #}
 {% if (isMobile == false)  %}
-    {% if (mobileTheme == 'green') and (mobileShape == 'circle') %}
+    {% if (desktopTheme == 'green') and (desktopShape == 'circle') %}
 		<div>
 		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppRoundGreen.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
 		</div>
     {% endif %}
-    {% if (mobileTheme == 'white') and (mobileShape == 'circle') %}
+    {% if (desktopTheme == 'white') and (desktopShape == 'circle') %}
 		<div>
 		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppRoundWhite.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
 		</div>
     {% endif %}
-    {% if (mobileTheme == 'green') and (mobileShape == 'rectangle') %}
+    {% if (desktopTheme == 'green') and (desktopShape == 'rectangle') %}
 		<div>
 		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppSquareGreen.svg" alt="whatsapp-chat" width="150" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
 		</div>
     {% endif %}
-    {% if (mobileTheme == 'white') and (mobileShape == 'rectangle') %}
+    {% if (desktopTheme == 'white') and (desktopShape == 'rectangle') %}
 		<div>
 		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppSquareWhite.svg" alt="whatsapp-chat" width="150" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
 		</div>
