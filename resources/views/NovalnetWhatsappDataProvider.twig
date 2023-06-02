@@ -22,7 +22,7 @@
 <input type="hidden" name="nn_whatsapp_profile_logo"  id="nn_whatsapp_profile_logo" value="{{profileLogo}}">
 
 {# Set a whatsapp widjets #}
-{% if (isMobile == false)  %}
+{% if (isMobile == 'false')  %}
     {% if (desktopTheme == 'green') and (desktopShape == 'circle') %}
 		<div>
 		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppRoundGreen.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
@@ -43,9 +43,10 @@
 		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppSquareWhite.svg" alt="whatsapp-chat" width="150" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
 		</div>
     {% endif %}
+{% endif %}
 
-{% else %}
-        {% if (mobileTheme == 'green') and (mobileShape == 'circle') %}
+{% if (isMobile == 'true') %}
+    {% if (mobileTheme == 'green') and (mobileShape == 'circle') %}
 		<div>
 		<img src="{{plugin_path('NovalnetWhatsapp')}}/images/WhatsAppRoundGreen.svg" alt="whatsapp-chat" width="45" height="45"  class="whatsappwidget" id="whatsappwidget" style="cursor:pointer;">
 		</div>
