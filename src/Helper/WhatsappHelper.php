@@ -17,7 +17,12 @@ use Plenty\Plugin\Log\Loggable;
 class WhatsappHelper
 {
     use Loggable;
-
+    /**
+     * Find the mobile device or not using server variable
+     *
+    */
+	private $_SERVER;
+    
     /**
      * Find the mobile device or not
      *
