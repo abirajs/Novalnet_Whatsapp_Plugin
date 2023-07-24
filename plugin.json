@@ -20,6 +20,9 @@
         					"php": ">=7.3 <8.1"
     					  },
 	"serviceProvider"               :"NovalnetWhatsapp\\Providers\\NovalnetServiceProvider",
+	"runOnBuild": [
+        "NovalnetWhatsapp\\Migrations\\CreateSettingsTable"
+   	 ],
 	"dataProviders"                 :
 	  [
 		{
